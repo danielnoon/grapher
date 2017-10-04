@@ -1,0 +1,29 @@
+{
+  "name": "code.org-grapher",
+  "version": "1.0.0",
+  "description": "Make an image for code.org's image widget.",
+  "main": "lib/grapher.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Supermegadex/grapher.git"
+  },
+  "keywords": [
+    "graph",
+    "graphing",
+    "math",
+    "code.org",
+    "fun"
+  ],
+  "author": "Daniel Noon <delpinothedragon1@hotmail.com> (https://supermegadex.cf)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Supermegadex/grapher/issues"
+  },
+  "homepage": "https://github.com/Supermegadex/grapher#readme"
+}
