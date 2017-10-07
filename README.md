@@ -20,10 +20,14 @@ You can use the grapher either on Web or Node.js, provided there is support for 
 ### General Use
 Just so I don't have to type things twice, here are the instructions applicable to b&w and color graphs:
 
-1. Install from npm `npm i code.org-grapher`
-2. Import the library `let Grapher = require('code.org-grapher');`
-3. Instantiate a plot `let parabola = new Grapher(254, 254, Math.pow(x, 2));`
-4. Graph the plot `parabola.graph().then(pic => console.log(pic));`
+1. Install from npm
+  * `npm i code.org-grapher`
+2. Import the library
+  * `let Grapher = require('code.org-grapher');`
+3. Instantiate a plot
+  * `let parabola = new Grapher(254, 254, Math.pow(x, 2));`
+4. Graph the plot
+  * `parabola.graph().then(pic => console.log(pic));`
 5. (optional) include an `options` object somewhere. There are two places you can put your options: as the fourth parameter of the `Grapher` constructor or as the sole parameter of the `graph` method.
 
 ### Black-and-white
@@ -37,8 +41,8 @@ let options = {
 }
 ```
 
-* `options.x`
-* `options.y`: tells the grapher where to put the y axis on the plot. It DOES move the graph's center to that location.
+* `options.x`: tells the grapher where to put the x axis on the plot. It DOES move the graph's center to that location.
+* `options.y`: same as `options.x` but it moves the y axis
 * `options.axes`: whether or not to draw the x and y axis
 
 *Note: the default for each property is listed first.*
