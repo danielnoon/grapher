@@ -12,7 +12,7 @@ let multi = new Grapher(254, 254,
     x => Math.abs(x),
     x => 10 * Math.sin(Math.cos(x / 10))
   ],
-  { axes: true, x: "center", y: "center" }
+  { axes: true, x: "center", y: "center", color: true, colors: ["ff0000", "00ff00", "0000ff", "ff00ff"] }
 );
 
-console.log(multi.graph());
+multi.graph().then(picture => console.log(picture));
