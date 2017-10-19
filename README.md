@@ -21,16 +21,21 @@ You can use the grapher on anything that supports ES6, including imports. If peo
 Just so I don't have to type things twice, here are the instructions applicable to b&w and color graphs:
 
 1. Install from npm
-  * `npm i code.org-grapher`
+  ```shell
+  $ npm i code.org-grapher
+  ```
 2. Import the library
-  *
   ```javascript
   import Grapher from 'code.org-grapher';
   ```
 3. Instantiate a plot
-  * `let parabola = new Grapher(254, 254, x => Math.pow(x, 2), <options>);`
+  ```javascript
+  let parabola = new Grapher(254, 254, x => Math.pow(x, 2), <options>);
+  ```
 4. Graph the plot
-  * `parabola.graph(<options>).then(pic => console.log(pic));`
+  ```javascript
+  parabola.graph(<options>).then(pic => console.log(pic));
+  ```
 5. (optional) include an `options` object somewhere. There are two places you can put your options: as the fourth parameter of the `Grapher` constructor or as the sole parameter of the `graph` method (shown above in angle brackets).
 6. Copy-and-paste or programmatically inset the result into the code.org widget.
 
@@ -74,16 +79,16 @@ let options = {
 ## Examples:
 **Each example is in the `test/test.js` file.**
 ```javascript
-// Require the grapher library
-const Grapher = require("../lib/grapher");
+// Import the grapher library
+import Grapher from 'code.org-grapher';
 
-// Instantiate a plot that graphs a parabola on a 254x254 image
+// Instantiate a plot that graphs a parabola centered on a 254x254 image
 let parabola = new Grapher(254, 254, x => 2 * x * x + 3 * x);
 
-// Do the same for a line, but it also draws the axes
+// Do the same for a line, but also draw x and y axes
 let line = new Grapher(254, 254, x => .5 * x, { axes: true });
 
-// Move the axes (kind of broken right now. I'm working on it.)
+// Move the axes
 let sin = new Grapher(254, 254, x => 10 * Math.sin(x / 10), { x: "bottom", y: "right", axes: true });
 
 // This one has multiple graphs and colors.
@@ -106,6 +111,7 @@ let multi = new Grapher(254, 254,
 // Graph them:
 parabola.graph().then(picture => console.log(picture));
 line.graph().then(picture => console.log(picture));
+
 // You can change settings when graphing
 sin.graph({x: "center", y: "center"}).then(picture => console.log(picture));
 multi.graph().then(picture => console.log(picture));
